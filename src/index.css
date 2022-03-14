@@ -7,10 +7,9 @@ header{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: rgb(148, 148, 148);
+    background-color: rgba(157, 173, 75, 0.637);
     height: 10rem;
     align-items: center;
-    box-shadow: inset 0 0px 20px 0px rgb(89, 110, 5), 0px 0px 20px 0px rgb(89, 110, 5);
     z-index: 1;
 }
 
@@ -19,6 +18,7 @@ header{
     margin-left: 1rem;
     height: 130px;
     box-shadow: 2px 2px 5px 2px rgb(83, 83, 83);
+    border-radius: 1rem;
 }
 .headerLink{
     text-decoration: none;
@@ -30,6 +30,8 @@ header{
     background-color: rgb(147, 173, 24);
     box-shadow: 2px 2px 2px 2px rgb(83, 83, 83);
     cursor: pointer;
+    color: rgb(255, 255, 255);
+    border-radius: 1rem;
 }
 main{
     height: 46rem;
@@ -37,17 +39,18 @@ main{
     position: absolute;
     top: 10rem;
     width: 100%;
-    background-color: rgb(148, 148, 148);
+    background-color: rgb(147, 173, 24);
     text-align: center;
     display: flex;
     justify-content: center;
     z-index: -1;
+    
 }
 .newEmployeeContent{
     background-color: rgb(255, 255, 255);
     width: 70%;
     box-shadow: 2px 2px 2px 2px rgb(83, 83, 83);
-
+    border-radius: 1rem;
 }
 form{
     display: flex;
@@ -75,12 +78,15 @@ fieldset{
     align-items: center; 
     width: 30rem; 
     border: solid 2px rgb(147, 173, 24);  
+    border-radius: 1rem;
 }
 input,select{
     width: 15rem;
     padding: 0.2rem;
     margin-bottom: 1rem;
     font-family: 'Fira Sans', sans-serif;
+    border-radius: 0.5rem;
+    border: solid 1px rgb(157, 173, 75);
 }
 .buttonForm{
     width: 100px;

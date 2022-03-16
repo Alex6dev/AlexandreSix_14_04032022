@@ -1,13 +1,15 @@
 body{
     margin: 0;
     position: relative;
+    min-width: 75rem;
+
 }
 header{
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: rgba(157, 173, 75, 0.637);
+    background-color: rgba(157, 173, 75, 0.425);
     height: 10rem;
     align-items: center;
     z-index: 1;
@@ -27,14 +29,13 @@ header{
     padding: 0 1rem 0 1rem;
 }
 .button{
-    background-color: rgb(147, 173, 24);
+    background-color: rgba(82, 75, 173, 0.63);
     box-shadow: 2px 2px 2px 2px rgb(83, 83, 83);
     cursor: pointer;
     color: rgb(255, 255, 255);
     border-radius: 1rem;
 }
 main{
-    height: 46rem;
     padding: 1rem 0 1rem 0;
     position: absolute;
     top: 10rem;
@@ -48,10 +49,12 @@ main{
 }
 .newEmployeeContent{
     background-color: rgb(255, 255, 255);
-    width: 70%;
+    width: 90%;
     box-shadow: 2px 2px 2px 2px rgb(83, 83, 83);
     border-radius: 1rem;
+
 }
+
 form{
     display: flex;
     flex-direction: column;
@@ -92,4 +95,55 @@ input,select{
     width: 100px;
     padding: 0.5rem 1rem;
     margin-top:-0.5rem;
+}
+
+.EmployeeListContent{
+    background-color: rgb(255, 255, 255);
+    width: 90%;
+    box-shadow: 2px 2px 2px 2px rgb(83, 83, 83);
+    border-radius: 1rem;
+    min-width: 70rem;
+    min-height: 46rem;
+}
+table{
+    width: 98%;
+    margin: 0 1rem ;
+    border-collapse: collapse;
+}
+.tableBoxEntriesSearch{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 2rem;
+    color: rgb(157, 173, 75);
+}
+.tableButton{
+    background-color: rgb(109, 126, 23);
+    border: none ;
+    cursor: pointer; 
+}
+.tableButtonActive{
+    background-color: rgb(106, 102, 161);
+    
+}
+thead{
+    background-color: rgb(147, 173, 24);
+    color: rgb(255, 255, 255);
+    
+}
+th{
+    border: solid 2px rgba(82, 75, 173, 0.63);
+}
+td{
+    border: solid 2px rgba(82, 75, 173, 0.63);
+}
+.tableTitreColums{
+    display: flex;
+    height: 100%;
+    padding: 0 0 0 3rem;
+    justify-content: space-between;
+}
+.tableBoxButton{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }

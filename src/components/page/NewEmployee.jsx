@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Header from '../Header';
 import { states } from '../../assets/states';
-//import { useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import * as employeeActions from '../../features/employee'
 import { useDispatch } from 'react-redux';
 
@@ -22,18 +22,15 @@ import { useDispatch } from 'react-redux';
     zipCode:null,
     department:null,
   });
-  
   const dispatch=useDispatch()
-  //const history=useHistory()
+  const history=useHistory()
   
-  useEffect(() => {
-    console.log(newEmployeeState)
-  }, [newEmployeeState])
-
+//function submitForm
   function submit(){
     if(newEmployeeState.firstName && newEmployeeState.lastName && newEmployeeState.birthDay && newEmployeeState.startDay && newEmployeeState.street && newEmployeeState.city && newEmployeeState.state && newEmployeeState.zipCode && newEmployeeState.department){
       console.log(newEmployeeState)
       dispatch(employeeActions.addNewEmployee(newEmployeeState))
+      history.push("/employee-list")
     }else{
       alert("formulaire incomplet")
     }

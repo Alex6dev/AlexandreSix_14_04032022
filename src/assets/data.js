@@ -29,7 +29,7 @@ export const dataListEmployee=[
         department:"Engeneering",
         street:"last avenue",
         city:"Berlin",
-        state:"allemagne",
+        state:"Allemagne",
         zipCode:"3",
     },
     {

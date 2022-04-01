@@ -1,6 +1,3 @@
-# AlexandreSix_14_04032022
-
-
 # Project 14 - Wealth Health
 
 ## 1-Description

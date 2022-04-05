@@ -4,6 +4,8 @@ import { states } from '../../assets/states';
 import { useHistory } from 'react-router-dom';
 import * as employeeActions from '../../features/employee'
 import { useDispatch } from 'react-redux';
+import Modal from 'plugin_modal_react/dist/components/Modal';
+import { ModalExit, ModalContent, ModalTittle, ModalIcons, ModalText } from 'plugin_modal_react';
 
 /**show Page new employee
  *  
@@ -21,7 +23,9 @@ import { useDispatch } from 'react-redux';
     state:null,
     zipCode:null,
     department:null,
-  });
+  })
+  const [showModal,setShowModal]= useState(false)
+  const [routeList,setRouteList]= useState(false)
   const dispatch=useDispatch()
   const history=useHistory()
   
@@ -30,11 +34,17 @@ import { useDispatch } from 'react-redux';
     if(newEmployeeState.firstName && newEmployeeState.lastName && newEmployeeState.birthDay && newEmployeeState.startDay && newEmployeeState.street && newEmployeeState.city && newEmployeeState.state && newEmployeeState.zipCode && newEmployeeState.department){
       console.log(newEmployeeState)
       dispatch(employeeActions.addNewEmployee(newEmployeeState))
-      history.push("/employee-list")
+      setShowModal(true)
     }else{
       alert("formulaire incomplet")
     }
   }
+  
+  useEffect(()=>{
+    if(routeList){
+      history.push("/employee-list")
+    }
+  },[routeList])
   return ( 
     <>
       <Header type="newEmployee"/>
@@ -81,7 +91,13 @@ import { useDispatch } from 'react-redux';
             <button type='button' className='button buttonForm' onClick={()=>submit()}>Save</button>
           </form>
         </section>
-        
+        {showModal&&<Modal>
+            <ModalContent type={"success"}>
+              <ModalTittle>EMPLOYEE ADD TO LIST <ModalIcons type={"success"}/></ModalTittle>
+              <ModalText> the employer {newEmployeeState.firstName+" "+newEmployeeState.lastName} is well added to the list of employers</ModalText>
+              <ModalExit etat={routeList} set={setRouteList}>employee list</ModalExit>
+            </ModalContent>
+          </Modal>}
       </main>
 
     </>

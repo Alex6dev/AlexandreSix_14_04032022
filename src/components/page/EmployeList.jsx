@@ -220,7 +220,7 @@ import Header from '../Header';
               </select>
               entries
             </p>
-            <div className='tableBoxSearch'><label htmlFor="search" >Search: </label><input type="text" onChange={(e)=>searchElement(e.target.value)}/></div>
+            <div className='tableBoxSearch'><label htmlFor="search" >Search: </label><input id='search' type="text" onChange={(e)=>searchElement(e.target.value)}/></div>
           </div>
           <table>
             <thead>
@@ -229,10 +229,10 @@ import Header from '../Header';
                   <div className='tableTitreColums'>
                     <p>First Name</p>
                     <div className='tableBoxButton'>
-                      <button type="button" className='tableButton' id='buttonFirstTop' onClick={()=>changeOrderList('firstName',false)}>
+                      <button type="button" className='tableButton' id='buttonFirstTop' aria-label="alphabetical first name button" onClick={()=>changeOrderList('firstName',false)}>
                         <i className="fa-solid fa-angle-up"></i>
                       </button>
-                      <button type="button" className='tableButton' id='buttonFirstBottom' onClick={()=>changeOrderList('firstName',true)}>
+                      <button type="button" className='tableButton' id='buttonFirstBottom' aria-label="reverse alphabetical first name button" onClick={()=>changeOrderList('firstName',true)}>
                         <i className="fa-solid fa-angle-down"></i>
                       </button>
                     </div>
@@ -242,10 +242,10 @@ import Header from '../Header';
                   <div className='tableTitreColums'>
                     <p>Last Name</p>
                     <div className='tableBoxButton'>
-                      <button type="button" className='tableButton' id='buttonLastTop' onClick={()=>changeOrderList('lastName',false)}>
+                      <button type="button" className='tableButton' id='buttonLastTop' aria-label="alphabetical last name button" onClick={()=>changeOrderList('lastName',false)}>
                         <i className="fa-solid fa-angle-up"></i>
                       </button>
-                      <button type="button" className='tableButton' id='buttonLastBottom' onClick={()=>changeOrderList('lastName',true)}>
+                      <button type="button" className='tableButton' id='buttonLastBottom' aria-label="reverse alphabetical last name button" onClick={()=>changeOrderList('lastName',true)}>
                         <i className="fa-solid fa-angle-down"></i>
                       </button>
                     </div>
@@ -255,10 +255,10 @@ import Header from '../Header';
                   <div className='tableTitreColums'>
                     <p>Date of Birth</p>
                     <div className='tableBoxButton'>
-                      <button type="button" className='tableButton' id='buttonBirthDayTop' onClick={()=>changeOrderList('birthDay',false)}>
+                      <button type="button" className='tableButton' id='buttonBirthDayTop' aria-label="birthday date timeline button" onClick={()=>changeOrderList('birthDay',false)}>
                         <i className="fa-solid fa-angle-up"></i>
                       </button>
-                      <button type="button" className='tableButton' id='buttonBirthDayBottom' onClick={()=>changeOrderList('birthDay',true)}>
+                      <button type="button" className='tableButton' id='buttonBirthDayBottom' aria-label="birthday date reverse timeline button" onClick={()=>changeOrderList('birthDay',true)}>
                         <i className="fa-solid fa-angle-down"></i>
                       </button>
                     </div>
@@ -268,10 +268,10 @@ import Header from '../Header';
                   <div className='tableTitreColums'>
                     <p>Start Date</p>
                     <div className='tableBoxButton'>
-                      <button type="button" className='tableButton' id='buttonStartDayTop' onClick={()=>changeOrderList('startDay',false)}>
+                      <button type="button" className='tableButton' id='buttonStartDayTop' aria-label="start date timeline button" onClick={()=>changeOrderList('startDay',false)}>
                         <i className="fa-solid fa-angle-up"></i>
                       </button>
-                      <button type="button" className='tableButton' id='buttonStartDayBottom' onClick={()=>changeOrderList('startDay',true)}>
+                      <button type="button" className='tableButton' id='buttonStartDayBottom' aria-label="start date reverse timeline button" onClick={()=>changeOrderList('startDay',true)}>
                         <i className="fa-solid fa-angle-down"></i>
                       </button>
                     </div>
@@ -281,10 +281,10 @@ import Header from '../Header';
                   <div className='tableTitreColums'>
                     <p>Department</p>
                     <div className='tableBoxButton'>
-                      <button type="button" className='tableButton' id='buttonDepartmentTop' onClick={()=>changeOrderList('department',false)}>
+                      <button type="button" className='tableButton' id='buttonDepartmentTop' aria-label="alphabetical department button" onClick={()=>changeOrderList('department',false)}>
                         <i className="fa-solid fa-angle-up"></i>
                       </button>
-                      <button type="button" className='tableButton' id='buttonDepartmentBottom' onClick={()=>changeOrderList('department',true)}>
+                      <button type="button" className='tableButton' id='buttonDepartmentBottom'  aria-label="reverse alphabetical department button" onClick={()=>changeOrderList('department',true)}>
                         <i className="fa-solid fa-angle-down"></i>
                       </button>
                     </div>
@@ -294,10 +294,10 @@ import Header from '../Header';
                   <div className='tableTitreColums'>
                     <p>Street</p>
                     <div className='tableBoxButton'>
-                      <button type="button" className='tableButton' id='buttonStreetTop' onClick={()=>changeOrderList('street',false)}>
+                      <button type="button" className='tableButton' id='buttonStreetTop' aria-label="reverse alphabetical street button" onClick={()=>changeOrderList('street',false)}>
                         <i className="fa-solid fa-angle-up"></i>
                       </button>
-                      <button type="button" className='tableButton' id='buttonStreetBottom' onClick={()=>changeOrderList('street',true)}>
+                      <button type="button" className='tableButton' id='buttonStreetBottom' aria-label="reverse alphabetical street button" onClick={()=>changeOrderList('street',true)}>
                         <i className="fa-solid fa-angle-down"></i>
                       </button>
                     </div>
@@ -307,10 +307,10 @@ import Header from '../Header';
                   <div className='tableTitreColums'>
                     <p>City</p>
                     <div className='tableBoxButton'>
-                      <button type="button" className='tableButton' id='buttonCityTop' onClick={()=>changeOrderList('city',false)}>
+                      <button type="button" className='tableButton' id='buttonCityTop' aria-label="alphabetical city button" onClick={()=>changeOrderList('city',false)}>
                         <i className="fa-solid fa-angle-up"></i>
                       </button>
-                      <button type="button" className='tableButton' id='buttonCityBottom' onClick={()=>changeOrderList('city',true)}>
+                      <button type="button" className='tableButton' id='buttonCityBottom' aria-label="reverse alphabetical city button" onClick={()=>changeOrderList('city',true)}>
                         <i className="fa-solid fa-angle-down"></i>
                       </button>
                     </div>
@@ -320,10 +320,10 @@ import Header from '../Header';
                   <div className='tableTitreColums'>
                     <p>State</p>
                     <div className='tableBoxButton'>
-                      <button type="button" className='tableButton' id='buttonStateTop' onClick={()=>changeOrderList('state',false)}>
+                      <button type="button" className='tableButton' id='buttonStateTop' aria-label="alphabetical state button" onClick={()=>changeOrderList('state',false)}>
                         <i className="fa-solid fa-angle-up"></i>
                       </button>
-                      <button type="button" className='tableButton' id='buttonStateBottom' onClick={()=>changeOrderList('state',true)}>
+                      <button type="button" className='tableButton' id='buttonStateBottom' aria-label="reverse alphabetical state button" onClick={()=>changeOrderList('state',true)}>
                         <i className="fa-solid fa-angle-down"></i>
                       </button>
                     </div>
@@ -333,10 +333,10 @@ import Header from '../Header';
                   <div className='tableTitreColums'>
                     <p>ZipCode</p>
                     <div className='tableBoxButton'>
-                      <button type="button" className='tableButton' id='buttonZipCodeTop' onClick={()=>changeOrderList('zipCode',false)}>
+                      <button type="button" className='tableButton' id='buttonZipCodeTop' aria-label="numerical order button" onClick={()=>changeOrderList('zipCode',false)}>
                         <i className="fa-solid fa-angle-up"></i>
                       </button>
-                      <button type="button" className='tableButton' id='buttonZipCodeBottom' onClick={()=>changeOrderList('zipCode',true)}>
+                      <button type="button" className='tableButton' id='buttonZipCodeBottom' aria-label="reverse numerical order button" onClick={()=>changeOrderList('zipCode',true)}>
                         <i className="fa-solid fa-angle-down"></i>
                       </button>
                     </div>
